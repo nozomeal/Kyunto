@@ -64,8 +64,8 @@
                     <navigationItem key="navigationItem" title="Title" id="m9Y-DC-Nlh">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="I9i-P6-dsk">
                             <connections>
-                                <action selector="saveMemo" destination="JEi-Qc-RED" id="R5p-BW-DrW"/>
-                                <segue destination="NVq-hg-VAp" kind="show" id="k1O-89-cSr"/>
+                                <action selector="saveMemo" destination="JEi-Qc-RED" id="BqB-9B-lyY"/>
+                                <segue destination="NVq-hg-VAp" kind="custom" id="ohF-O1-Z46"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -95,7 +95,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zDW-ck-LzS" id="8By-uo-aZY">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -110,7 +110,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="mostViewed" id="QmI-u0-hEh"/>
                     <connections>
-                        <outlet property="memoTableView" destination="DLd-Jz-OTb" id="y0g-kp-W7d"/>
+                        <outlet property="memoTableView" destination="DLd-Jz-OTb" id="cvS-4G-HYi"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jDq-qP-he6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -159,6 +159,6 @@
         <image name="heart.jpg" width="132" height="124"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="k1O-89-cSr"/>
+        <segue reference="ohF-O1-Z46"/>
     </inferredMetricsTieBreakers>
 </document>

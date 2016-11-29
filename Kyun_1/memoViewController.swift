@@ -12,10 +12,14 @@ import UIKit
 import UIKit
 
 class memoViewController: UIViewController,UITextFieldDelegate {
+    var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate
+    //AppDelegateのインスタンスを取得
+
     
     var saveMemoData:UserDefaults=UserDefaults.standard
     //memo配列
     var KyunMemo: [String]=[]
+    @IBOutlet var textField:UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -74,14 +78,14 @@ class memoViewController: UIViewController,UITextFieldDelegate {
     @IBAction func saveMemo(){
         
         //UserDefalutsを書き込む（きゅんを保存）
-        saveMemoData.set(KyunMemo,forKey: "kyunMemoKey")
+        saveMemoData.set(textField,forKey: "kyunMemoKey")
         saveMemoData.synchronize()
         
+        //値の受け渡し
+        /*var memo = KyunMemo.text
+        appDelegate.kyunMemo = memo*/
         
-        /*NSDictionary * memo = [[NSUserDefaults, standardUserDefaults], dictionaryRepresentation];
-        NSLog("NSUserDefaults: %@", memo);*/
-        
-    //前回の保存内容があるかどうか判定
+           //前回の保存内容があるかどうか判定
         if((saveMemoData.object(forKey: "kyunMemoKey")) != nil){
             //objectsを配列として確定させ、前回の保存内容を格納
             let objects=saveMemoData.object(forKey: "kyunMemoKey") as! NSArray
@@ -94,27 +98,9 @@ class memoViewController: UIViewController,UITextFieldDelegate {
                 KyunMemo.append(memoString as! String)
             }
         }
-        //NSLog("@%:入力されました。",saveMemoData.object(forKey: "kyunMemoKey"))
+        
+       
+        
     }
-    
-    
-    
-    //データの受け渡し
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    
-        var kyunTableViewController1 = segue.destination as! kyunTableViewController
-        kyunTableViewController1.kyunMemoArray=saveMemoData.object(forKey: "kyunMemoKey") as! [String]
-    }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }

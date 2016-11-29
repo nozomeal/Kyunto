@@ -9,15 +9,23 @@
 import UIKit
 
 class kyunTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var appDelegate:AppDelegate = UIApplication.shared.delegate as! AppDelegate //AppDelegateのインスタンスを取得
     
     @IBOutlet weak var memoTableView: UITableView!
     var kyunMemoArray:[String] = []
+    //var parameters: [String : String] = [:] // 画面遷移後は ["hello": "こんにちは", "goodbye": "さようなら"]
     
     override func viewDidLoad() {
+        /*kyunMemoArray = appDelegate.KyunMemo*/
+    
+        NSLog("@%:受け渡しおk",kyunMemoArray)
         super.viewDidLoad()
         
         memoTableView.delegate = self
         memoTableView.dataSource = self
+        
+        
+        
         // Do any additional setup after loading the view, typically from a nib.
         //memoTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
@@ -27,8 +35,6 @@ class kyunTableViewController: UIViewController, UITableViewDelegate, UITableVie
         // Dispose of any resources that can be recreated.
     }
     
-    // セルに表示するテキスト
-    //let kyunMemoArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     
     // セルの個数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
