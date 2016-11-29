@@ -12,10 +12,30 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var myTabBar:UITabBarController!
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //追加-->
+        /*window = UIWindow(frame: UIScreen.main.bounds)
+        
+        //UIViewControllerをタブ数分作成してUITabViewControllerに埋め込む
+        let homeView:UIViewController = KyunViewController()
+        let memoView:UIViewController = memoViewController()
+        
+        homeView.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.bookmarks,tag: 1)//アイコン
+        memoView.tabBarItem = UITabBarItem(tabBarSystemItem: UITabBarSystemItem.mostViewed,tag: 2)
+        let viewArray = NSArray(objects: homeView,memoView)
+        myTabBar = UITabBarController()
+        myTabBar?.setViewControllers(viewArray as [AnyObject], animated: false)
+        self.window!.rootViewController = myTabBar
+        
+        self.window?.makeKeyAndVisible()
+        
+        //追加<--*/
+        
         return true
     }
 
