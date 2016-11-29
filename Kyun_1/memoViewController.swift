@@ -14,7 +14,8 @@ import UIKit
 class memoViewController: UIViewController,UITextFieldDelegate {
     
     var saveMemoData:UserDefaults=UserDefaults.standard
-    Srting[] 
+    //memo配列
+    var KyunMemo: [String]=[]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,12 +73,39 @@ class memoViewController: UIViewController,UITextFieldDelegate {
     
     @IBAction func saveMemo(){
         
-        
-        
         //UserDefalutsを書き込む（きゅんを保存）
-        saveMemoData.set(kyunMemo,forKey: "kyunMemoKey")
+        saveMemoData.set(KyunMemo,forKey: "kyunMemoKey")
         saveMemoData.synchronize()
+        
+        
+        /*NSDictionary * memo = [[NSUserDefaults, standardUserDefaults], dictionaryRepresentation];
+        NSLog("NSUserDefaults: %@", memo);*/
+        
+    //前回の保存内容があるかどうか判定
+        if((saveMemoData.object(forKey: "kyunMemoKey")) != nil){
+            //objectsを配列として確定させ、前回の保存内容を格納
+            let objects=saveMemoData.object(forKey: "kyunMemoKey") as! NSArray
+            //各名前を格納するための変数を宣言
+            var _:AnyObject //memoString
+            
+            //前回の保存内容が格納された配列の中身を一つずつ取り出す
+            for memoString in objects{
+                //配列に追加していく
+                KyunMemo.append(memoString as! String)
+            }
+        }
+        //NSLog("@%:入力されました。",saveMemoData.object(forKey: "kyunMemoKey"))
     }
+    
+    
+    
+    //データの受け渡し
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+        var kyunTableViewController1 = segue.destination as! kyunTableViewController
+        kyunTableViewController1.kyunMemoArray=saveMemoData.object(forKey: "kyunMemoKey") as! [String]
+    }
+    
     
     /*
      // MARK: - Navigation

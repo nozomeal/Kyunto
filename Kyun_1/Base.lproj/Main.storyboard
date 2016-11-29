@@ -62,7 +62,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="m9Y-DC-Nlh">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="I9i-P6-dsk"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="I9i-P6-dsk">
+                            <connections>
+                                <action selector="saveMemo" destination="JEi-Qc-RED" id="R5p-BW-DrW"/>
+                                <segue destination="NVq-hg-VAp" kind="show" id="k1O-89-cSr"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KlS-p9-G6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -153,4 +158,7 @@
     <resources>
         <image name="heart.jpg" width="132" height="124"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="k1O-89-cSr"/>
+    </inferredMetricsTieBreakers>
 </document>

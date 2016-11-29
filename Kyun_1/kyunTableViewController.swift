@@ -11,6 +11,8 @@ import UIKit
 class kyunTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var memoTableView: UITableView!
+    var kyunMemoArray:[String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,7 +28,7 @@ class kyunTableViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     
     // セルに表示するテキスト
-    let kyunMemoArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+    //let kyunMemoArray = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
     
     // セルの個数
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
