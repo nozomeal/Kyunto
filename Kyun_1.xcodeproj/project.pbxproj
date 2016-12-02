@@ -16,7 +16,9 @@
 		2D274A8D1DE2C4AC0095F093 /* Kyun_1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D274A8C1DE2C4AC0095F093 /* Kyun_1Tests.swift */; };
 		2D274A981DE2C4AC0095F093 /* Kyun_1UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D274A971DE2C4AC0095F093 /* Kyun_1UITests.swift */; };
 		2D274AA61DE2C8BD0095F093 /* heart.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D274AA51DE2C8BD0095F093 /* heart.jpg */; };
-		2DF09C131DED93D80080F48C /* kyunTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF09C121DED93D80080F48C /* kyunTableViewController.swift */; };
+		2DC7036D1DF1E0A200B06756 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC7036C1DF1E0A200B06756 /* TableViewCell.swift */; };
+		2DC7036F1DF1E16300B06756 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DC7036E1DF1E16300B06756 /* TableViewCell.xib */; };
+		2DC703711DF1E43200B06756 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DC703701DF1E43200B06756 /* TableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,7 +54,9 @@
 		2D274A971DE2C4AC0095F093 /* Kyun_1UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kyun_1UITests.swift; sourceTree = "<group>"; };
 		2D274A991DE2C4AC0095F093 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2D274AA51DE2C8BD0095F093 /* heart.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = heart.jpg; sourceTree = "<group>"; };
-		2DF09C121DED93D80080F48C /* kyunTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = kyunTableViewController.swift; sourceTree = "<group>"; };
+		2DC7036C1DF1E0A200B06756 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		2DC7036E1DF1E16300B06756 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		2DC703701DF1E43200B06756 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,12 +110,14 @@
 				2D274A771DE2C4AC0095F093 /* AppDelegate.swift */,
 				2D274AA51DE2C8BD0095F093 /* heart.jpg */,
 				2D274A791DE2C4AC0095F093 /* KyunViewController.swift */,
+				2D026D901DEB099600657375 /* memoViewController.swift */,
+				2DC703701DF1E43200B06756 /* TableViewController.swift */,
+				2DC7036C1DF1E0A200B06756 /* TableViewCell.swift */,
+				2DC7036E1DF1E16300B06756 /* TableViewCell.xib */,
 				2D274A7B1DE2C4AC0095F093 /* Main.storyboard */,
 				2D274A7E1DE2C4AC0095F093 /* Assets.xcassets */,
 				2D274A801DE2C4AC0095F093 /* LaunchScreen.storyboard */,
 				2D274A831DE2C4AC0095F093 /* Info.plist */,
-				2DF09C121DED93D80080F48C /* kyunTableViewController.swift */,
-				2D026D901DEB099600657375 /* memoViewController.swift */,
 			);
 			path = Kyun_1;
 			sourceTree = "<group>";
@@ -246,6 +252,7 @@
 			files = (
 				2D274AA61DE2C8BD0095F093 /* heart.jpg in Resources */,
 				2D274A821DE2C4AC0095F093 /* LaunchScreen.storyboard in Resources */,
+				2DC7036F1DF1E16300B06756 /* TableViewCell.xib in Resources */,
 				2D274A7F1DE2C4AC0095F093 /* Assets.xcassets in Resources */,
 				2D274A7D1DE2C4AC0095F093 /* Main.storyboard in Resources */,
 			);
@@ -273,8 +280,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D274A7A1DE2C4AC0095F093 /* KyunViewController.swift in Sources */,
+				2DC7036D1DF1E0A200B06756 /* TableViewCell.swift in Sources */,
 				2D026D911DEB099600657375 /* memoViewController.swift in Sources */,
-				2DF09C131DED93D80080F48C /* kyunTableViewController.swift in Sources */,
+				2DC703711DF1E43200B06756 /* TableViewController.swift in Sources */,
 				2D274A781DE2C4AC0095F093 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -58,6 +58,7 @@ class KyunViewController: UIViewController {
                 handler:{ action in
                 //ボタンが押された時の動作
                     NSLog("メモボタンが押されました！")
+                    self.segueToSecondViewController()
                 }
             )
         )
@@ -75,6 +76,18 @@ class KyunViewController: UIViewController {
 
         present(alert, animated: true,completion:nil)
     }
+    
+    //presentPickerControllerのメソッド
+    func segueToSecondViewController() {
+        self.performSegue(withIdentifier: "toSecondViewController", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSecondViewController" {
+            let memoViewController = segue.destination as! memoViewController
+            //secondViewController.parameters = sender as! [String : String]
+        }    }
+    
     
     
 }
